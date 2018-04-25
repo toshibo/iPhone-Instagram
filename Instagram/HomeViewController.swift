@@ -119,7 +119,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action: #selector(handleLikeButton(_:forEvent:)), for: .touchUpInside)
-        //cell.commentButton.addTarget(self, action: #selector(handleCommentButton(_:forEvent:)), for: .touchUpInside)
+        cell.commentButton.addTarget(self, action: #selector(handleCommentButton(_:forEvent:)), for: .touchUpInside)
         
         return cell
     }
@@ -157,8 +157,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let likes = ["likes": postData.likes]
             postRef.updateChildValues(likes)
         }
-        
-        
     }
     
     //コメントボタン、およびすべてのコメントを見るがクリックされたらコメント一覧および入力画面に遷移させる

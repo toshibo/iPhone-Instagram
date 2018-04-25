@@ -34,8 +34,10 @@ class PostTableViewCell: UITableViewCell {
         
         self.posterLabel.text = postData.name!
         self.captionLabel.text = postData.caption!
-        let likeNumber = postData.likes.count
-        likeLabel.text = "\(likeNumber)"
+        //let likeNumber = postData.likes.count
+        likeLabel.text = "\(postData.likes.count)"
+        //let commentNumber = postData.comments.count
+        commentLabel.text = "\(postData.comments.count)"
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
